@@ -1,8 +1,9 @@
 #include <stdio.h>
 /*
- *a program to print some text 
- */
+ * main program prints text
+ * a program to print some text
+ * */
 int main(void){
 	puts("\"Programming is like building a multilingual puzzle");
-	return(0);
+	return (0);
 }
