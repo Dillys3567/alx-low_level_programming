@@ -24,9 +24,11 @@ int main(void)
 			}
 			putchar(',');
 			putchar(' ');
-			num3+=1;
+			num3 += 1;
+			num2 = num3;
 		}
-		num4+=1;
+		num4 += 1;
+		num = num4;
 
 	}
 	putchar('\n');
