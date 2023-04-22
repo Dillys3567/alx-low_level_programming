@@ -7,20 +7,23 @@ int main(void)
 {
 	int num;
 	int num2;
-	int num3;
 
-	num3 = 1;
-	for (num = 0 ; num <= 9 ; num++)
+	for (num = '0' ; num <= '9' ; num++)
 	{
-		for (num2 = 1 ; num2 <= 9 ; num++)
+		for (num2 = num + 1 ; num2 <= '9' ; num++)
 		{
-			putchar(num + '0');
-			putchar(num2 + '0');
-			putchar(',');
-			putchar(' ');
+			if (num != num2)
+			{
+				putchar(num);
+				putchar(num2);
+				if (num == '8' && num2 == '9')
+				{
+					continue;
+				}
+				putchar(',');
+				putchar(' ');
+			}
 		}
-		num3 += 1;
-		num2 = num3;
 
 	}
 	putchar('\n');
