@@ -8,10 +8,10 @@ int main(void)
 	int num;
 	int num2;
 	int num3;
-	int num4;
+	//int num4;
 
 	num3 = 1;
-	num4 = 0;
+	//num4 = 0;
 	for (num = 0 ; num <= 9 ; num++)
 	{
 		for (num2 = 1 ; num2 <= 9 ; num++)
@@ -22,7 +22,7 @@ int main(void)
 			putchar(' ');
 		}
 		num3 += 1;
-		num2 = num3
+		num2 = num3;
 
 	}
 	putchar('\n');
