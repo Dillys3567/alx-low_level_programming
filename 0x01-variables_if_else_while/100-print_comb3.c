@@ -12,23 +12,17 @@ int main(void)
 
 	num3 = 1;
 	num4 = 0;
-	for (num = num4 ; num <= 9 ; num++)
+	for (num = 0 ; num <= 9 ; num++)
 	{
-		for (num2 = num3 ; num2 <= 9 ; num++)
+		for (num2 = 1 ; num2 <= 9 ; num++)
 		{
 			putchar(num + '0');
 			putchar(num2 + '0');
-			if (num == 8 && num2 == 9)
-			{
-				break;
-			}
 			putchar(',');
 			putchar(' ');
-			num3 += 1;
-			num2 = num3;
 		}
-		num4 += 1;
-		num = num4;
+		num3 += 1;
+		num2 = num3
 
 	}
 	putchar('\n');
