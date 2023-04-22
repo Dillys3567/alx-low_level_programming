@@ -6,6 +6,7 @@
 int main(void)
 {
 	int num;
+	int num2;
 	int num3;
 	num3 = 1;
 
@@ -22,6 +23,7 @@ int main(void)
 			putchar(',');
 			putchar(' ');
 			num3++;
+		}
 
 	}
 	putchar('\n');
