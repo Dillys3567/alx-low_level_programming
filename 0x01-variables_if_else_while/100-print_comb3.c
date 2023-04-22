@@ -8,9 +8,11 @@ int main(void)
 	int num;
 	int num2;
 	int num3;
-	num3 = 1;
+	int num4;
 
-	for (num = 0 ; num <= 9 ; num++)
+	num3 = 1;
+	num4 = 0;
+	for (num = num4 ; num <= 9 ; num++)
 	{
 		for (num2 = num3 ; num2 <= 9 ; num++)
 		{
@@ -22,8 +24,9 @@ int main(void)
 			}
 			putchar(',');
 			putchar(' ');
-			num3++;
+			num3+=1;
 		}
+		num4+=1;
 
 	}
 	putchar('\n');
