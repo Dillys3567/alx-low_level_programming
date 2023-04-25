@@ -1,28 +1,50 @@
 #include <stdio.h>
 /**
- * main - fibonnaci series
- * Return: Always 0
+ *  main - Prints the first 50 Fibonacci numbers
+ *  Return: Always 0
  */
 int main(void)
 {
-	long int num1;
-	long int num2;
-	long int fib;
-	long int nfib;
+        int count, b, b2;
+        long int num1, num2, fib, fib2, num11, num2;
 
-	num1 = 1;
+        num1 = 1;
 	num2 = 2;
-	fib = nfib = 0;
-	while (fib <= 40000000)
-	{
-		fib = num1 + num2;
-		num1 = num2;
-		num2 = fib;
-		if ((num1 % 2) == 0)
+        b =  b2 = 1;
+        printf("%ld, %ld", num1, num2);
+        for (c = 0; c < 50; c++)
+        {
+                if (b)
 		{
-			nfib += num1;
-		}
-	}
-	printf("%ld\n", nfib);
-	return (0);
+			fib = num1 + num2;
+                        printf(", %ld", fib);
+                        num1 = num2;
+                        num2 = fib;
+                }
+                else
+                {
+                        if (b2)
+                        {
+                                num11 = num1 % 1000000000;
+                                num22 = num2 % 1000000000;
+                                num1 = num1 / 1000000000;
+                                num2 = num2 / 1000000000;
+                                b2 = 0;
+                        }
+
+                        fib2 = (num11 + num22);
+                        fib = num1 + num2 + (fib2 / 1000000000);
+                        printf(", %ld", fib);
+                        printf("%ld", fib2 % 1000000000);
+                        num1 = num2;
+                        num11 = num22;
+                        num2 = fib;
+                        num22 = (fib2 % 1000000000);
+                }
+                if (((num1 + num2) < 0) && b == 1)
+                        b = 0;
+        }
+        printf("\n");
+        return (0);
+
 }
