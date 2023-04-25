@@ -5,17 +5,34 @@
  */
 void print_to_98(int n)
 {
-	int count;
+	int num;
 
-	for (count = n; count <= 98; count++)
+	if (num < 98)
 	{
-		if (n != 98)
+		for (num = n; num <= 98; num++)
 		{
-			printf("%d, ", n);
+			if (num != 98)
+			{
+				printf("%d, ", num);
+			}
+			else
+			{
+				printf("%d ", num);
+			}
 		}
-		else
+	}
+	else
+	{
+		for (num = n; num >= 98; num--)
 		{
-			printf("%d", n);
+			if (num != 98)
+			{
+				printf("%d, ",num);
+			}
+			else
+			{
+				printf("%d ",num);
+			}
 		}
 	}
 }
