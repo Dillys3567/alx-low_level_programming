@@ -9,11 +9,11 @@ int print_sign(int n)
 	int num;
 
 	num = n;
-	if (n > 0)
+	if (num > 0)
 	{
 		return (1);
 	}
-	else if (n == 0)
+	else if (num == 0)
 	{
 		return (0);
 	}
