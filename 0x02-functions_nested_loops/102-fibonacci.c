@@ -6,13 +6,13 @@
 int main(void)
 {
         int count, b, b2;
-        long int num1, num2, fib, fib2, num11, num2;
+        long int num1, num2, fib, fib2, num11, num22;
 
         num1 = 1;
 	num2 = 2;
         b =  b2 = 1;
         printf("%ld, %ld", num1, num2);
-        for (c = 0; c < 50; c++)
+        for (count = 0; count < 50; count++)
         {
                 if (b)
 		{
