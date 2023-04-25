@@ -10,7 +10,7 @@ int main(void)
 	num1 = 1;
 	num2 = 2;
 	fib = nfib = 0;
-	while (fib <= 40000000)
+	while (fib <= 4000000)
 	{
 		fib = num1 + num2;
 		num1 = num2;
