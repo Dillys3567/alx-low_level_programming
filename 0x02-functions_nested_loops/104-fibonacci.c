@@ -3,7 +3,7 @@
  * main - first 100 fibonacci
  * Return: Always 0
  */
-int main (void)
+int main(void)
 {
 	int count, b, b2;
 	long int num1, num2, fib, fib2, num11, num22;
@@ -12,7 +12,7 @@ int main (void)
 	num2 = 2;
 	b = b2 = 1;
 	printf("%ld, %ld", num1, num2);
-	for (count = 0; count < 98; count++)
+	for (count = 0; count < 96; count++)
 	{
 		if (b)
 		{
