@@ -24,7 +24,7 @@ int main(void)
 		else
 		{
 			if (b2)
-			{	
+			{
 				num11 = num1 % 1000000000;
 				num22 = num2 % 1000000000;
 				num1 = num1 / 1000000000;
