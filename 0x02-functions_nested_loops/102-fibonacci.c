@@ -23,28 +23,26 @@ int main(void)
 		}
 		else
 		{
-		if (b2)
-			{
-                                num11 = num1 % 1000000000;
-                                num22 = num2 % 1000000000;
-                                num1 = num1 / 1000000000;
-                                num2 = num2 / 1000000000;
-                                b2 = 0;
-                        }
-
-                        fib2 = (num11 + num22);
-                        fib = num1 + num2 + (fib2 / 1000000000);
-                        printf(", %ld", fib);
-                        printf("%ld", fib2 % 1000000000);
-                        num1 = num2;
-                        num11 = num22;
-                        num2 = fib;
-                        num22 = (fib2 % 1000000000);
-                }
-                if (((num1 + num2) < 0) && b == 1)
-                        b = 0;
-        }
-        printf("\n");
-        return (0);
-
+			if (b2)
+			{	
+				num11 = num1 % 1000000000;
+				num22 = num2 % 1000000000;
+				num1 = num1 / 1000000000;
+				num2 = num2 / 1000000000;
+				b2 = 0;
+			}
+			fib2 = (num11 + num22);
+			fib = num1 + num2 + (fib2 / 1000000000);
+			printf(", %ld", fib);
+			printf("%ld", fib2 % 1000000000);
+			num1 = num2;
+			num11 = num22;
+			num2 = fib;
+			num22 = (fib2 % 1000000000);
+		}
+		if (((num1 + num2) < 0) && b == 1)
+			b = 0;
+	}
+	printf("\n");
+	return (0);
 }
