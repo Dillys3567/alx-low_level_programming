@@ -19,13 +19,13 @@ void print_number(int n)
 	pv = num;
 	count = 1;
 
-	while(pv > 9)
+	while (pv > 9)
 	{
 		pv /= 10;
 		count *= 10;
 	}
 
-	for (;count >= 1; count /=10)
+	for (; count >= 1; count /= 10)
 	{
 		_putchar(((num / count) % 10) + '0');
 	}
