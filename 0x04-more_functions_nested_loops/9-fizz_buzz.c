@@ -7,9 +7,9 @@ int main(void)
 {
 	int n;
 
-	for (n = 0; n < 100; n++)
+	for (n = 1; n <= 100; n++)
 	{
-		if (n % 15 == 0)
+		if ((n % 5 == 0) && (n % 3 == 0))
 		{
 			printf("FizzBuzz ");
 		}
