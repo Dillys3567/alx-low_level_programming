@@ -1,21 +1,21 @@
 #include "main.h"
 /**
- * print_diagonal - print diagonal
- * @n: number of backslash
+ * print_diagonal - print diagonal line
+ * @n: number of \ printed
  */
 void print_diagonal(int n)
 {
-	int count;
-	int spaces;
+	int line, space;
 
-	for (count = 0; count < n; count++)
+	for (line = 0; line < n; line++)
 	{
-		for (spaces = 0; spaces < count; spaces++)
+		for (space = 0; space < line; space++)
 		{
-			_putchar('');
+			_putchar(' ');
 		}
 		_putchar(92);
-		if (count < (n - 1))
+
+		if (line < (n - 1))
 		{
 			_putchar('\n');
 		}
