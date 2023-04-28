@@ -11,7 +11,7 @@ void print_triangle(int size)
 	{
 		for (b = 0; b < (size - a); b++)
 		{
-			_putchar(' ');
+			_putchar('');
 		}
 		for (b-- ; b < size ; b++)
 		{
