@@ -8,13 +8,13 @@
 int main(void)
 {
 	int rand, x;
+	time_t t;
 
 	rand = x = 0;
-	time_t t;
 	srand((unsigned int) time(&t));
 	while (x < 4472)
 	{
-		r = rand() % 128;
+		rand = srand() % 128;
 		if ((x + rand) > 4472)
 			break;
 	}
