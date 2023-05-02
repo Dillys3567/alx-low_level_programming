@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_array - ptint a number of array elements
  * @a: array
@@ -9,7 +10,7 @@ void print_array(int *a, int n)
 	int len = 0;
 	int c = 0;
 
-	while (s[len] != '\0')
+	while (a[len] != '\0')
 	{
 		len++;
 	}
@@ -18,7 +19,7 @@ void print_array(int *a, int n)
 	{
 		if (c == n - 1)
 			continue;
-		printf("%d, ", s[c]);
+		printf("%d, ", a[c]);
 	}
-	printf("%d\n", s[n - 1]);
+	printf("%d\n", a[n - 1]);
 }
