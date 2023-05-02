@@ -8,7 +8,7 @@ void puts2(char *str)
 	int len = 0;
 	int c = 0;
 
-	while (s[len] != '\0')
+	while (str[len] != '\0')
 	{
 		len++;
 	}
@@ -19,7 +19,7 @@ void puts2(char *str)
 		{
 			continue;
 		}
-		_putchar(s[c]);
+		_putchar(str[c]);
 	}
 	_putchar('\n');
 }
