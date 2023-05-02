@@ -3,6 +3,7 @@
  * *_strcpy - copy string
  * @dest: destination
  * @src: source
+ * Return: returns destination
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -12,7 +13,8 @@ char *_strcpy(char *dest, char *src)
 	while (src[len] != '\0')
 		len++;
 
-	for (;c < len; c++)
+	len++;
+	for (; c < len; c++)
 	{
 		dest[c] = src[c];
 	}
