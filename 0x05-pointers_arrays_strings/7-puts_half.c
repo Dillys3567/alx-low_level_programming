@@ -14,7 +14,7 @@ void puts_half(char *str)
 	}
 
 	if (c % 2 != 0)
-		c = (len - 1) / 2;
+		c = ((len - 1) / 2) + 1;
 	else
 		c = len / 2;
 	for (; c < len; c++)
