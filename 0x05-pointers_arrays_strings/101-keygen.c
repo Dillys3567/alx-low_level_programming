@@ -7,17 +7,24 @@
  */
 int main(void)
 {
-	int rand, x;
-	time_t t;
+	int password[100];
+	int x, tot, n;
 
-	rand = x = 0;
-	srand((unsigned int) time(&t));
-	while (x < 4472)
+	tot = 0;
+	srand(time(NULL));
+
+	for (x = 0; x < 100; x++)
 	{
-		rand = srand() % 128;
-		if ((x + rand) > 4472)
+		password[x] = rand() % 78;
+		tot += password[x] + '0';
+		putchar(password[x] + '0');
+		if ((2772 - tot) - '0' < 78)
+		{
+			n = 2772 - tot - '0';
+			tot += n;
+			putchar(n + '0');
 			break;
+		}
 	}
-	printf("%c\n", (4472 - x));
 	return (0);
 }
