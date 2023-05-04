@@ -1,6 +1,29 @@
 #include "main.h"
-#include <stdio.h>
 /**
+ * rev - reverse array
+ * @n: int
+ * Return: 0
+ */
+void rev(char *n)
+{
+	int x = 0;
+	int y = 0;
+	char t;
+
+	while (*(n + x) != '\0')
+	{
+		x++;
+	}
+	x--;
+	for (y = 0; y < x; y++, x--)
+	{
+		t = *(n + y);
+		*(n + y) = *(n + x);
+		*(n + x) = temp;
+	}
+}
+
+ /**
  * *infinite_add - add 2 numbers
  * @n1: first number
  * @n2: second number
@@ -10,7 +33,9 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int over = x = y = digit = val = val2 = temp = 0;
+	int over, x, y, digit, val, val2, temp;
+
+	over = x = y = digit = val = val2 = temp = 0;
 
 	while (*(n1 + x) != '\0')
 		x++;
@@ -43,6 +68,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if (digit == size_r)
 		return (0);
 	*(r + digit) = '\0';
-	rev_string(r);
+	rev(r);
 	return (r);
 }
