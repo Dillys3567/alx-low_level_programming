@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * sqrt - guess root
+ * sqrts - guess root
  * @num: number
  * @guess: guess
  * Return: square root
  */
-int sqrt(int num, int guess)
+int sqrts(int num, int guess)
 {
 	int new = (guess + num / guess) / 2;
 
@@ -15,7 +15,7 @@ int sqrt(int num, int guess)
 	}
 	else
 	{
-		return (sqrt(num, new));
+		return (sqrts(num, new));
 	}
 }
 /**
@@ -32,7 +32,7 @@ int _sqrt_recursion(int n)
 	else if (n == 1)
 	{
 		return (1);
-
+	}
 	else
-		return (sqrt(n, 1));
+		return (sqrts(n, 1));
 }
