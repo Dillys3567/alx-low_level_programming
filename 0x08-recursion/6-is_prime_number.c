@@ -19,6 +19,7 @@ int primes(int num, int divisor)
 	{
 		return (0);
 	}
+	return (primes(num, divisor - 1));
 }
 
 /**
