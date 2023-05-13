@@ -3,6 +3,25 @@
 #include <ctype.h>
 #include <string.h>
 /**
+ * checker - check for digits
+ * @str: character
+ * Return: 0 or 1
+ */
+int checker(char *str)
+{
+	unsigned int x = 0;
+
+	while (x < strlen(str))
+	{
+		if (!isdigit(str[x]))
+		{
+			return (0);
+		}
+		x++;
+	}
+	return (1);
+}
+/**
  * main - entry
  * @argc: count of arguments
  * @argv: array
@@ -10,29 +29,25 @@
  */
 int main(int argc, char *argv[])
 {
-	int i;
+	int i, value;
 	int sum = 0;
 
-	if (argc == 1)
+	i = 1;
+
+	while (i < argc)
 	{
-		printf("0\n");
-		return (0);
-	}
-	else if (argc > 1)
-	{
-		for (i = 1; i < argc; i++)
+		if (checker(argv[i]))
 		{
-			if (!isdigit(argv[i]))
-			{
-				printf("Error\n");
-				return (1);
-			}
-			else
-			{
-				sum += atoi(argv[i]);
-			}
+			value = atoi(argv[i]);
+			sum += value;
 		}
-		printf("%d\n", sum);
-		return (0);
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
+		i++;
 	}
+	printf("%d\n", sum);
+	return (0);
 }
