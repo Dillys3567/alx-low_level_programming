@@ -12,7 +12,7 @@ char **strtow(char *str)
 	int i, word_count = 0, in_word = 0, current_word = 0;
 	int word_length;
 
-	if (str == NULL || str == "")
+	if (str == NULL || *str == '\0')
 	{
 		return (0);
 	}
@@ -55,7 +55,7 @@ char **strtow(char *str)
 					return (0);
 				}
 				strncpy(b[current_word], word_start, word_length);
-				b[current_word][word_length} = '\0';
+				b[current_word][word_length] = '\0';
 				current_word++;
 		}
 		else if (in_word == 0)
@@ -68,7 +68,7 @@ char **strtow(char *str)
 	if (in_word == 1)
 	{
 		word_length = p - word_start;
-		b[current_word] = (char *)malloc((word_lenght + 1) * sizeof(char));
+		b[current_word] = (char *)malloc((word_length + 1) * sizeof(char));
 		if (b[current_word] == NULL)
 		{
 			for (i = 0; i < current_word; i++)
