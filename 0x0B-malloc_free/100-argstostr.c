@@ -9,7 +9,7 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i;
+	int i, j = 0;
 	char *b;
 	unsigned int len = 0;
 
@@ -28,8 +28,11 @@ char *argstostr(int ac, char **av)
 	}
 	for (i = 0; i < ac; i++)
 	{
-		b[i] = **av[i] + '\n';
+		b[j] = av[i];
+		j += strlen(av[i]);
+		b[j] = '\n';
+		j++;
 	}
-	b[len] = '\0'
+	b[len] = '\0';
 	return (b);
 }
