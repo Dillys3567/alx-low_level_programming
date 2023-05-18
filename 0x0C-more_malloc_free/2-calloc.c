@@ -10,6 +10,7 @@
 char *_mset(char *s, char d, unsigned int n)
 {
 	unsigned int i;
+
 	for (i = 0; i < n; i++)
 	{
 		s[i] = d;
@@ -25,6 +26,7 @@ char *_mset(char *s, char d, unsigned int n)
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *b;
+
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	b = malloc(size * nmemb);
