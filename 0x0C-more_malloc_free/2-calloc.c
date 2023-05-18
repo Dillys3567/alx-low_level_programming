@@ -3,18 +3,18 @@
 /**
  * *_mset - fill memory
  * @s: array
- * @b: character
+ * @d: character
  * @n: size
  * Return: array pointer
  */
-char *_mset(char *s, char b, unsigned int n)
+char *_mset(char *s, char d, unsigned int n)
 {
-        unsigned int i;
-        for (i = 0; i < n; i++)
-        {
-                s[i] = b;
-        }
-        return (s);
+	unsigned int i;
+	for (i = 0; i < n; i++)
+	{
+		s[i] = d;
+	}
+	return (s);
 }
 /**
  * *_calloc - allocate memory and fill
@@ -24,12 +24,12 @@ char *_mset(char *s, char b, unsigned int n)
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-        char *b;
-        if (nmemb == 0 || size == 0)
-                return (NULL);
-        b = malloc(size * nmemb);
-        if (b == NULL)
-                return (NULL);
-        _mset(b, 0, nmemb * size);
-        return (b);
+	char *b;
+	if (nmemb == 0 || size == 0)
+		return (NULL);
+	b = malloc(size * nmemb);
+	if (b == NULL)
+		return (NULL);
+	_mset(b, 0, nmemb * size);
+	return (b);
 }
