@@ -1,5 +1,6 @@
 #include "lists.h"
 #include <stdio.h>
+#include <stddef.h>
 /**
  * print_list - return number of nodes
  * @h: list struct
