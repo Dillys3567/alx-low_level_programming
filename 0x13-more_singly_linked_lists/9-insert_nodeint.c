@@ -22,7 +22,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = new;
 		return (new);
 	}
-	for (;t && c < idx; c++)
+	for (; t && c < idx; c++)
 	{
 		if (c == idx - 1)
 		{
