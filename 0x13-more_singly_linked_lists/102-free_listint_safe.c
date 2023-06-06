@@ -15,7 +15,7 @@ size_t free_listint_safe(listint_t **h)
 		return (0);
 	while (*h)
 	{
-		d = *h - (*h)-next;
+		d = *h - (*h)->next;
 		if (d > 0)
 		{
 			t = (*h)->next;
@@ -31,6 +31,6 @@ size_t free_listint_safe(listint_t **h)
 			break;
 		}
 	}
-	*h == NULL;
+	*h = NULL;
 	return (num);
 }
