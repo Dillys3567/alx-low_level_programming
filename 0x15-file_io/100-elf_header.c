@@ -84,7 +84,7 @@ void print_dt(unsigned char *ident)
 			printf("2's complement, big endian\n");
 			break;
 		default:
-			printf("<unknown: %x>\n", e_ident[EI_CLASS]);
+			printf("<unknown: %x>\n", ident[EI_CLASS]);
 	}
 }
 /**
@@ -144,7 +144,7 @@ void print_os(unsigned char *ident)
 			printf("Standalone App\n");
 			break;
 		default:
-			printf("<unknown: %x>\n", e_ident[EI_OSABI]);
+			printf("<unknown: %x>\n", ident[EI_OSABI]);
 	}
 }
 /**
@@ -153,14 +153,14 @@ void print_os(unsigned char *ident)
  */
 void print_ab(unsigned char *ident)
 {
-	printf(" ABI Version: %d\n",  e_ident[EI_ABIVERSION]);
+	printf(" ABI Version: %d\n",  ident[EI_ABIVERSION]);
 }
 /**
  * print typ - print header type
  * @type: elf type
  * @ident: pointer to elf class
  */
-void print typ(unsigned int type, unsigned char *ident)
+void print_typ(unsigned int type, unsigned char *ident)
 {
 	if (ident[EI_DATA] == ELFDATA2MSB)
 		type >>= 8;
@@ -183,7 +183,7 @@ void print typ(unsigned int type, unsigned char *ident)
 			printf("CORE (Core file)\n");
 			break;
 		default:
-			printf("<unknown: %x>\n", e_type);
+			printf("<unknown: %x>\n", type);
 	}
 }
 /**
@@ -248,16 +248,16 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
-	elf_check(head->ident);
+	elf_check(head->e_ident);
 	printf("ELF Header:\n");
-	print_mg(head->ident);
-	print_cl(head->ident);
-	print_dt(head->ident);
-	print_vr(head->ident);
-	print_os(head->ident);
-	print_ab(head->ident);
-	print_typ(head->type, head->ident);
-	print_en(head->entry, head->ident);
+	print_mg(head->e_ident);
+	print_cl(head->e_ident);
+	print_dt(head->e_ident);
+	print_vr(head->e_ident);
+	print_os(head->e_ident);
+	print_ab(head->e_ident);
+	print_typ(head->e_type, head->e_ident);
+	print_en(head->e_entry, head->e_ident);
 	free(head);
 	elf_close(op);
 	return (0);
