@@ -29,7 +29,7 @@ void closef(int fd)
 	x = close(fd);
 	if (x == -1)
 	{
-		dprintf(STDERROR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
@@ -55,6 +55,13 @@ int main(int argc, char *argv[])
 	too = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	do {
 		if (fr == -1  || rd == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			free(buff);
+			exit(98);
+		}
+		wr = write(too, buff, rd);
+		if (too == -1 || wr == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buff);
