@@ -1,11 +1,11 @@
 #include "pyfuncs.h"
 /**
- * add - add 
+ * add - add
  * @a: a
  * @b: b
  * Return: result of add
  */
-int add(a, b)
+int add(int a, int b)
 {
 	return (a + b);
 }
@@ -15,7 +15,7 @@ int add(a, b)
  * @b: b
  * Return: result of sub
  */
-int sub(a, b)
+int sub(int a, int b)
 {
 	return (a - b);
 }
@@ -25,9 +25,10 @@ int sub(a, b)
  * @b: b
  * Return: a * b
  */
-int mul(a, b)
+int mul(int a, int b)
 {
 	int c = a * b;
+
 	return (c);
 }
 /**
@@ -36,7 +37,7 @@ int mul(a, b)
  * @b: b
  * Return: result of div
  */
-int div(a, b)
+int div(int a, int b)
 {
 	return (a / b);
 }
@@ -46,7 +47,7 @@ int div(a, b)
  * @b: b
  * Return: result of mod
  */
-int mod(a, b)
+int mod(int a, int b)
 {
 	return (a % b);
 }
